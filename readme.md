@@ -14,18 +14,17 @@
 - [ ] Arbeitspaket 2: Schreiben Sie eine Liste, welche Klassen und Objekte es braucht, und wie diese miteinander interagieren. Das Format ist Ihnen freigestellt, aber Sie müssen es auch bereits heute auf github laden. (Dieses AP dauert ausnahmsweise nur 15')
 - [ ] Arbeitspaket 3 (Falls Sie den *maker space* besuchen, dann dürfen Sie diesen Punkt löschen. Ansonsten können Sie hier mit dem Coden beginnen, nachdem Sie sich ganz klar überlegt haben, was Ihr erster Schritt ist und den hier als AP festgehalten haben.)
 
-✍️ Heute habe ich... (50-100 Wörter)
-
-☝️ Vergessen Sie nicht, einen ersten Code und Skizze auf github hochzuladen!
+Heute habe ich eine Projektidee entwickelt und mir überlegt was in meinem Spiel alles vorhanden sein soll. Wir haben die Klassen (Waffen, Fähigkeiten, Helden, Bösewichte) erstellt, danach haben wir noch Objekte in die Klassen eingefügt.
 
 ## 29.8
 
-- [ ] Arbeitspaket 1
-- [ ] Arbeitspaket 2
-- [ ] Arbeitspaket 3 
+- [ ] Die Klassen und Atribute "Fähigkeiten" und "Waffen" erstellen
+- [ ] Alle Atribute von einer Klasse sollen angezeigt werden
+- [ ] Die Infos von den Charaktern sollen angezeigt werden.
 
 📵 Eines dieser Arbeitspakete ist offline.
 
 ✍️ Heute habe ich... (50-100 Wörter)
 
 ☝️ Vergessen Sie nicht, Ihren Code auf github hochzuladen
+
