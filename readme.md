@@ -18,9 +18,9 @@ Heute habe ich eine Projektidee entwickelt und mir überlegt was in meinem Spiel
 
 ## 29.8
 
-- [x] Alle wichtigen Characterdaten in den code einbauen, damit man sie später dann verwenden kann
-- [x] Alle Atribute von einer Klasse sollen im Code angezeigt werden
-- [ ] Ofline: Den Programmablaufsplan zeichnen.
+- [x] Alle wichtigen Characterdaten in den code einbauen, damit man sie später dann verwenden kann.
+- [x] Alle Atribute von einer Klasse sollen im Code angezeigt werden.
+- [x] Ofline: Den Programmablaufsplan zeichnen.
 
 
 Heute habe ich an meinem Projekt weitergearbeitet und die Struktur für mein Spiel aufgebaut. Dazu habe ich die Klassen (zB. Spider Man, Silversurfer) erstellt, die Konstruktoren angepasst und Objekte korrekt instanziiert. Außerdem hatte ich einen Fehler mit doppelten Variablennamen den ich dann noch behoben habe.
@@ -29,7 +29,12 @@ Heute habe ich an meinem Projekt weitergearbeitet und die Struktur für mein Spi
 
 
 
+## 05.09
 
+- [ ] Auswählen können, welchen Helden man spielen möchte.
+- [ ] Informationen zu den Characteren in der Konsole anzeigen
+- [ ] Der Benutzer soll den Kampf selber starten können
+- [ ] Character Auswahl aufzeichnen (wie ich es mir vorstellen würde)
 
 
 
