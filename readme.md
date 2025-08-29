@@ -21,11 +21,12 @@ Heute habe ich eine Projektidee entwickelt und mir überlegt was in meinem Spiel
 - [x] Alle wichtigen Characterdaten in den code einbauen, damit man sie später dann verwenden kann
 - [x] Alle Atribute von einer Klasse sollen im Code angezeigt werden
 - [ ] Ofline: Den Programmablaufsplan zeichnen.
-📵 Eines dieser Arbeitspakete ist offline.
 
-✍️ Heute habe ich... (50-100 Wörter)
+
+Heute habe ich an meinem Projekt weitergearbeitet und die Struktur für mein Spiel aufgebaut. Dazu habe ich die Klassen (zB. Spider Man, Silversurfer) erstellt, die Konstruktoren angepasst und Objekte korrekt instanziiert. Außerdem hatte ich einen Fehler mit doppelten Variablennamen den ich dann noch behoben habe.
 
 ☝️ Vergessen Sie nicht, Ihren Code auf github hochzuladen
+
 
 
 
