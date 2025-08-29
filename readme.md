@@ -18,14 +18,15 @@ Heute habe ich eine Projektidee entwickelt und mir überlegt was in meinem Spiel
 
 ## 29.8
 
-- [x] Die Klassen und Atribute "Fähigkeiten" und "Waffen" erstellen
-- [ ] Alle Atribute von einer Klasse sollen angezeigt werden
+- [x] Alle wichtigen Characterdaten in den code einbauen, damit man sie später dann verwenden kann
+- [x] Alle Atribute von einer Klasse sollen im Code angezeigt werden
 - [ ] Ofline: Den Programmablaufsplan zeichnen.
 📵 Eines dieser Arbeitspakete ist offline.
 
 ✍️ Heute habe ich... (50-100 Wörter)
 
 ☝️ Vergessen Sie nicht, Ihren Code auf github hochzuladen
+
 
 
 
