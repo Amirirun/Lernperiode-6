@@ -25,7 +25,11 @@ Heute habe ich eine Projektidee entwickelt und mir überlegt was in meinem Spiel
 
 Heute habe ich an meinem Projekt weitergearbeitet und die Struktur für mein Spiel aufgebaut. Dazu habe ich die Klassen (zB. Spider Man, Silversurfer) erstellt, die Konstruktoren angepasst und Objekte korrekt instanziiert. Außerdem hatte ich einen Fehler mit doppelten Variablennamen den ich dann noch behoben habe.
 
-☝️ Vergessen Sie nicht, Ihren Code auf github hochzuladen
+![WhatsApp Bild 2025-08-29 um 10 46 28_34983c46](https://github.com/user-attachments/assets/18811393-8f85-4d44-b988-93780ec7e63d)
+
+
+
+
 
 
 
