@@ -36,8 +36,9 @@ Heute habe ich an meinem Projekt weitergearbeitet und die Struktur für mein Spi
 - [x] Der Benutzer soll den Kampf selber starten können
 - [x] Waffe selber auswählen können
 
-      ![WhatsApp Bild 2025-09-05 um 11 41 03_c2bef238](https://github.com/user-attachments/assets/4c092736-2050-4017-839d-099688d55499)
+      
 
+![WhatsApp Bild 2025-09-05 um 11 41 04_14ea24c5](https://github.com/user-attachments/assets/a40d3cc3-b08a-4caf-aec8-300bf93eac56)
 
 Heute habe ich den geplanten Ablauf des Kampfes programmiertechnisch aufgezeichnet. Außerdem werden nun die Charakterinformationen in der Konsole angezeigt. Der Benutzer kann den Kampf selbst starten und vor dem Beginn eine Waffe auswählen. Das Programmieren des Kampfes hat sich bis jetzt als schwieriger erwiesen wie gedacht
 
@@ -48,6 +49,7 @@ Heute habe ich den geplanten Ablauf des Kampfes programmiertechnisch aufgezeichn
 - [x] Sobald der Held oder der Bösewicht keine Lebenspunkte mehr hat, soll der Kampf sofort beendet werden.
 - [x] Während des Kampfes soll angezeigt werden, wie viel Schaden man selbst gemacht oder bekommen hat.
 - [x] Der Gewinner soll festgelegt werden sowie angezeigt werden.
+
 
 
 
