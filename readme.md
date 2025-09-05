@@ -43,12 +43,13 @@ Heute habe ich an meinem Projekt weitergearbeitet und die Struktur für mein Spi
 Heute habe ich den geplanten Ablauf des Kampfes programmiertechnisch aufgezeichnet. Außerdem werden nun die Charakterinformationen in der Konsole angezeigt. Der Benutzer kann den Kampf selbst starten und vor dem Beginn eine Waffe auswählen. Das Programmieren des Kampfes hat sich bis jetzt als schwieriger erwiesen wie gedacht
 
 
-## 05.09
+## 12.09
 
-- [x] Man soll Treffer zählen können und jeder Druck auf die Leertaste soll als Hit gelten.
-- [x] Sobald der Held oder der Bösewicht keine Lebenspunkte mehr hat, soll der Kampf sofort beendet werden.
-- [x] Während des Kampfes soll angezeigt werden, wie viel Schaden man selbst gemacht oder bekommen hat.
-- [x] Der Gewinner soll festgelegt werden sowie angezeigt werden.
+- [ ] Man soll Treffer zählen können und jeder Druck auf die Leertaste soll als Hit gelten.
+- [ ] Sobald der Held oder der Bösewicht keine Lebenspunkte mehr hat, soll der Kampf sofort beendet werden.
+- [ ] Während des Kampfes soll angezeigt werden, wie viel Schaden man selbst gemacht oder bekommen hat.
+- [ ] Der Gewinner soll festgelegt werden sowie angezeigt werden.
+
 
 
 
