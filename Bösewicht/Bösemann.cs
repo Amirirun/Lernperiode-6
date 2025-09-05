@@ -7,20 +7,21 @@ using System.Threading.Tasks;
 namespace Lernperiode_6.Bösewicht
 {
     class Bösemann
-    {
 
+    {
         public string Name;
-        public string Weapon;
-        public string Ability;
-        public int Life;
+        public int Leben;
         public int Damage;
-        public Bösemann(string name, string weapon, string ability, int life, int damage)
+        public int Gold;
+
+        public Bösemann(string name, int leben, int damage, int gold)
+
         {
+
             Name = name;
-            Weapon = weapon;
-            Ability = ability;
-            Life = life;
+            Leben = leben;
             Damage = damage;
+            Gold = gold;
 
         }
 

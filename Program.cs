@@ -1,5 +1,6 @@
 ﻿using Lernperiode_6.Held;
 using Lernperiode_6.Bösewicht;
+using mini_game;
 
 namespace Lernperiode_6
 {
@@ -10,12 +11,154 @@ namespace Lernperiode_6
         static void Main(string[] args)
         {
 
-            Michael_Scofield Held = new Michael_Scofield("Michael Scofield", "RPG", "Hochbegabt", 80, 100);
+            static async Task TypeWriteAsync(string text, int delayMs = 50)
+            {
+                foreach (char ch in text)
+                {
+                    Console.Write(ch);
+                    await Task.Delay(delayMs);
+                }
+                Console.WriteLine();
+            }
+
+            Hulk Held1 = new Hulk("Hulk", 1990, 100, 50);
+
+            Michael_Scofield Held2 = new Michael_Scofield("Michael Scofield", "Brechstange", "Hochbegabt", 60, 10);
+
+            Spiderman  Held3 = new Spiderman("Spiderman", "Spinnennetz", "Spinnensinn", 60, 17);
+
+            
 
 
 
 
+            Bösemann Bösewicht1 = new Bösemann("Bösemann", 200, 50, 80);
+
+            Silversurfer Bösewicht2 = new Silversurfer("Silversurfer", "Surfboard", "Fliegen",65, 18);
+
+            Thanos Bösewicht3 = new Thanos("Thanos", "Goldener Handschuh", "Ultimative Zerstörung", 85, 20);
+
+            Hammer hammer = new Hammer("Hammer", 4, 30);
+            Axt axt = new Axt("Axt", 2, 23);
+
+
+            Heiltrank heil = new Heiltrank(30, 5);
+
+
+
+            Console.WriteLine("Name: " + Held1.Name);
+            Console.WriteLine("Id: " + Held1.Id);
+            Console.WriteLine("Dein Gold im Tresor:" + Held1.Gold);
+            Console.WriteLine("Afangsleben:" + Held1.Leben);
+
+            Console.WriteLine("Beovr du Anfagen kannst musst du in den Shop und dich ausrüsten!");
+            Console.WriteLine();
+            Console.WriteLine("Stats für Hammer(H):");
+            Console.WriteLine("Damage:" + hammer.Damage);
+            Console.WriteLine("Price:" + hammer.Price);
+            Console.WriteLine();
+            Console.WriteLine("----------------------------------------------------------------");
+            Console.WriteLine();
+            Console.WriteLine("Stats für Axt(A):");
+            Console.WriteLine("Damage:" + axt.Damage);
+            Console.WriteLine("Price:" + axt.Price);
+            Console.WriteLine();
+            Console.WriteLine();
+
+            TypeWriteAsync("Welche Waffe möchtest du dir für den Anfang kaufen (H/A)?", 50);
+
+            string waffeneingabe = Console.ReadLine()?.Trim().ToUpper();
+
+            if (waffeneingabe == "H")
+            {
+                if (Held1.TrySpendGold(hammer.Price))
+                {
+                    Console.WriteLine("Glückwunsch zu deinem Kauf!");
+                    Console.WriteLine($"Gekauft: {hammer.Name} (-{hammer.Price} Gold)");
+                    Console.WriteLine("Gold jetzt:" + Held1.Gold);
+
+                }
+
+                else
+                {
+                    Console.WriteLine("Zu wenig Gold");
+                    return;
+                }
+            }
+
+            else if (waffeneingabe == "A")
+            {
+                if (Held1.TrySpendGold(axt.Price))
+                {
+                    Console.WriteLine("Glückwunsch zu deinem Kauf!");
+                    Console.WriteLine($"Gekauft: {axt.Name} (-{axt.Price} Gold)");
+                    Console.WriteLine("Gold jetzt:" + Held1.Gold);
+
+                }
+
+                else
+                {
+                    Console.WriteLine("Zu wenig Gold");
+                    return;
+                }
+            }
+
+            else
+            {
+                Console.WriteLine("Ungültige Eingabe");
+            }
+            Console.WriteLine();
+            Console.WriteLine();
+            Console.WriteLine("----------------------------------------------------------------");
+
+            TypeWriteAsync($"Möchtest du auch noch einen Heiltrank(ja/nein) kaufen für {heil.Price}?", 50);
+
+            string heiltrankeingabe = Console.ReadLine();
+
+
+            if (heiltrankeingabe == "ja")
+            {
+
+                if (Held1.TrySpendGold(heil.Price))
+                {
+                    heil.Anwenden(Held1);
+                    Console.WriteLine($"Gekauft: Heiltrank (-{heil.Price} Gold)");
+                    Console.WriteLine("In deinem Tresor ist noch:" + Held1.Gold);
+                }
+
+            }
+
+            else
+
+            {
+                Console.WriteLine($"{Held1.Name} trinkt keinen Heiltrank.");
+            }
+
+            Console.WriteLine("Leben nach dem Trank:" + Held1.Leben);
+
+
+            Console.ForegroundColor = ConsoleColor.Red;
+            Console.WriteLine("DU bist bereit für den Kampf gegen Bösemann!");
+            Console.ResetColor();
+
+            while (Bösewicht1.Leben > 0 && Held1.Leben > 0 )
+            {
+                var key = Console.ReadKey(intercept: true).Key;
+
+                if (key == ConsoleKey.Spacebar)
+                {
+                    Console.WriteLine("Timer gestartet: 10 Sekunden laufen...");
+                
+                    Thread.Sleep(10000);
+                    Console.WriteLine("DU bist bereit für den Kampf gegen Bösemann!");
+                    Console.WriteLine("Pause: 5 Sekunden");
+                    Thread.Sleep(5000); 
+                    Console.WriteLine("Fertig!");
+
+                }
+            }
         }
+
 
 
 
