@@ -31,12 +31,23 @@ Heute habe ich an meinem Projekt weitergearbeitet und die Struktur für mein Spi
 
 ## 05.09
 
-- [ ] Auswählen können, welchen Helden man spielen möchte.
-- [ ] Informationen zu den Characteren in der Konsole anzeigen
-- [ ] Der Benutzer soll den Kampf selber starten können
-- [ ] Character Auswahl aufzeichnen (wie ich es mir vorstellen würde)
+- [x] Offline: Aufzeichenen wie der Kampf programmiertechnisch geplant ist (Trefferberechnungen, Lebensabzug und Reihnfolge von Aktionen
+- [x] Informationen zu den Characteren in der Konsole anzeigen
+- [x] Der Benutzer soll den Kampf selber starten können
+- [x] Waffe selber auswählen können
+
+      ![WhatsApp Bild 2025-09-05 um 11 41 03_c2bef238](https://github.com/user-attachments/assets/4c092736-2050-4017-839d-099688d55499)
 
 
+Heute habe ich den geplanten Ablauf des Kampfes programmiertechnisch aufgezeichnet. Außerdem werden nun die Charakterinformationen in der Konsole angezeigt. Der Benutzer kann den Kampf selbst starten und vor dem Beginn eine Waffe auswählen. Das Programmieren des Kampfes hat sich bis jetzt als schwieriger erwiesen wie gedacht
+
+
+## 05.09
+
+- [x] Man soll Treffer zählen können und jeder Druck auf die Leertaste soll als Hit gelten.
+- [x] Sobald der Held oder der Bösewicht keine Lebenspunkte mehr hat, soll der Kampf sofort beendet werden.
+- [x] Während des Kampfes soll angezeigt werden, wie viel Schaden man selbst gemacht oder bekommen hat.
+- [x] Der Gewinner soll festgelegt werden sowie angezeigt werden.
 
 
 
