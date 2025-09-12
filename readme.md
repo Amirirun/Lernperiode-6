@@ -45,10 +45,11 @@ Heute habe ich den geplanten Ablauf des Kampfes programmiertechnisch aufgezeichn
 
 ## 12.09
 
-- [ ] Man soll Treffer zählen können und jeder Druck auf die Leertaste soll als Hit gelten.
-- [ ] Sobald der Held oder der Bösewicht keine Lebenspunkte mehr hat, soll der Kampf sofort beendet werden.
-- [ ] Während des Kampfes soll angezeigt werden, wie viel Schaden man selbst gemacht oder bekommen hat.
-- [ ] Der Gewinner soll festgelegt werden sowie angezeigt werden.
+- [x] Man soll Treffer zählen können und jeder Druck auf die Leertaste soll als Hit gelten.
+- [x] Sobald der Held oder der Bösewicht keine Lebenspunkte mehr hat, soll der Kampf sofort beendet werden.
+- [x] Während des Kampfes soll angezeigt werden, wie viel Schaden man selbst gemacht oder bekommen hat.
+- [x] Der Gewinner soll festgelegt werden sowie angezeigt werden.
+
 
 
 
