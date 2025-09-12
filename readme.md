@@ -52,8 +52,12 @@ Heute habe ich den geplanten Ablauf des Kampfes programmiertechnisch aufgezeichn
 
 Heute habe ich den gesamten Kampf programmiert. Man kann mit der Leertaste Damage austeilen. Der Drache gibt einem immer  ein feste Anzahl Damage. Es gibt noch ein Problem, und zwar wenn man zu schnell die Leertaste drückt stürzt das Programm ab.
 
+## 19.09
 
-
+- [ ] Neue Waffen hinzufügen, die man mit dem gewonnen Gold kaufen kann
+- [ ] Für Waffen ein eigenes Menü erstellen
+- [ ] Schadenstrank hinzufügen
+- [ ] Anfangen einen neuen Bossfight zu programmieren
 
 
 
