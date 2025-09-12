@@ -1,6 +1,7 @@
 ﻿using Lernperiode_6.Held;
 using Lernperiode_6.Bösewicht;
 using mini_game;
+using System.Diagnostics;
 
 namespace Lernperiode_6
 {
@@ -25,16 +26,16 @@ namespace Lernperiode_6
 
             Michael_Scofield Held2 = new Michael_Scofield("Michael Scofield", "Brechstange", "Hochbegabt", 60, 10);
 
-            Spiderman  Held3 = new Spiderman("Spiderman", "Spinnennetz", "Spinnensinn", 60, 17);
+            Spiderman Held3 = new Spiderman("Spiderman", "Spinnennetz", "Spinnensinn", 60, 17);
 
-            
+
 
 
 
 
             Bösemann Bösewicht1 = new Bösemann("Bösemann", 200, 50, 80);
 
-            Silversurfer Bösewicht2 = new Silversurfer("Silversurfer", "Surfboard", "Fliegen",65, 18);
+            Silversurfer Bösewicht2 = new Silversurfer("Silversurfer", "Surfboard", "Fliegen", 65, 18);
 
             Thanos Bösewicht3 = new Thanos("Thanos", "Goldener Handschuh", "Ultimative Zerstörung", 85, 20);
 
@@ -141,28 +142,94 @@ namespace Lernperiode_6
             Console.WriteLine("DU bist bereit für den Kampf gegen Bösemann!");
             Console.ResetColor();
 
-            while (Bösewicht1.Leben > 0 && Held1.Leben > 0 )
-            {
-                var key = Console.ReadKey(intercept: true).Key;
+            int schadenProSchlag = 1;
+            string waffenName = "?";
 
-                if (key == ConsoleKey.Spacebar)
+            if (waffeneingabe == "H")
+            {
+                schadenProSchlag = hammer.Damage;
+                waffenName = hammer.Name;
+            }
+            else if (waffeneingabe == "A")
+            {
+                schadenProSchlag = axt.Damage;
+                waffenName = axt.Name;
+            }
+            else
+            {
+                Console.WriteLine("Ungültige Eingabe. Bitte H oder A.");
+                return;
+            }
+
+
+            Console.WriteLine();
+            Console.WriteLine($"Kampf gegen {Bösewicht1.Name}! Waffe: {waffenName} (DMG {schadenProSchlag})");
+            Console.WriteLine("Drücke [LEERTASTE] zum Zuschlagen, [ESC] zum Abbrechen.");
+
+            while (Held1.Leben > 0 && Bösewicht1.Leben > 0)
+            {
+                int hits = 0, dealt = 0;
+                var sw = Stopwatch.StartNew();
+
+                while (sw.Elapsed < TimeSpan.FromSeconds(5))
                 {
-                    Console.WriteLine("Timer gestartet: 10 Sekunden laufen...");
-                
-                    Thread.Sleep(10000);
-                    Console.WriteLine("DU bist bereit für den Kampf gegen Bösemann!");
-                    Console.WriteLine("Pause: 5 Sekunden");
-                    Thread.Sleep(5000); 
-                    Console.WriteLine("Fertig!");
+                    if (Console.KeyAvailable)
+                    {
+                        var key = Console.ReadKey(intercept: true).Key;
+                        if (key == ConsoleKey.Escape) { Console.WriteLine("Kampf abgebrochen."); return; }
+                        if (key == ConsoleKey.Spacebar)
+                        {
+                            hits++;
+                            dealt += schadenProSchlag;
+                            Console.Write($"\rTreffer: {hits}, geplanter Schaden: {dealt}     ");
+                        }
+                    }
+                    System.Threading.Thread.Sleep(10);
+                }
+
+                Console.WriteLine();
+                Bösewicht1.Leben -= dealt;
+                if (Bösewicht1.Leben < 0) Bösewicht1.Leben = 0;
+
+                Console.WriteLine($"Deine Treffer: {hits}  ->  Schaden: {dealt}");
+                Console.WriteLine($"Drache HP: {Bösewicht1.Leben}");
+
+
+                if (Bösewicht1.Leben <= 0)
+                {
+                    Console.ForegroundColor = ConsoleColor.Green;
+                    Console.WriteLine("Der Drache ist besiegt!");
+                    Console.ResetColor();
+
+                    Held1.AddGold(Bösewicht1.Gold);
+                    Console.WriteLine($"+{Bösewicht1.Gold} Gold Beute");
+                    Bösewicht1.Gold = 0;
+                    break;
+                }
+
+
+                Held1.Leben -= Bösewicht1.Damage;
+                if (Held1.Leben < 1) Held1.Leben = 0;
+                Console.WriteLine($"Der Drache schlägt zurück! -{Bösewicht1.Damage} HP  ->  Dein Leben: {Held1.Leben}");
+                Console.WriteLine("-------------------------------------------------------------");
+
+
+                if (Held1.Leben <= 1)
+                {
+                    Console.ForegroundColor = ConsoleColor.Red;
+                    Console.WriteLine("Du wurdest besiegt…");
+                    Console.ResetColor();
 
                 }
+
+
+
+
+
+                Console.WriteLine();
+                Console.WriteLine("Dein Gold im Tresor beträgt:" + Held1.Gold);
+
             }
         }
-
-
-
-
-
-
     }
 }
