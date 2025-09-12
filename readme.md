@@ -50,6 +50,8 @@ Heute habe ich den geplanten Ablauf des Kampfes programmiertechnisch aufgezeichn
 - [x] Während des Kampfes soll angezeigt werden, wie viel Schaden man selbst gemacht oder bekommen hat.
 - [x] Der Gewinner soll festgelegt werden sowie angezeigt werden.
 
+Heute habe ich den gesamten Kampf programmiert. Man kann mit der Leertaste Damage austeilen. Der Drache gibt einem immer  ein feste Anzahl Damage. Es gibt noch ein Problem, und zwar wenn man zu schnell die Leertaste drückt stürzt das Programm ab.
+
 
 
 
