@@ -54,10 +54,21 @@ Heute habe ich den gesamten Kampf programmiert. Man kann mit der Leertaste Damag
 
 ## 19.09
 
-- [ ] Neue Waffen hinzufügen, die man mit dem gewonnen Gold kaufen kann
-- [ ] Für Waffen ein eigenes Menü erstellen
+- [x] Neue Waffen hinzufügen, die man mit dem gewonnen Gold kaufen kann
+- [x] Für Waffen ein menü machen
 - [ ] Schadenstrank hinzufügen
-- [ ] Anfangen einen neuen Bossfight zu programmieren
+- [x] Fehler auberessung des Leertaten Bugs(Programm stürtzt ab wenn man zu oft die angriffs Taste drückt)
 
+Heute habe ich neue Waffen hinzugefügt sowieso die Waffen in ein Menü eingefügt. Zudem habe ich noch einen grossen Bug im Spiel behoben. Den Schadenstrank zu erstellen habe ich nicht geschafft, weshalb ich es nächste Woche machen werde.
+
+
+
+
+
+## 19.09
+
+- [ ] Nachdem der Spieler die Sachen gekauft hat(Waffen, Schadenstrank), muss er gegen den neuen Bösewicht kämpfen.Der Bösewicht wird stärker sein
+- [ ] Es soll auch ein Schadenstrank geben, indem der Spieler es dem Bösewicht geben kann.
+- [ ] Nachdem Kampf gegen dem letzten Bösewicht, wird dem Spieler mittgeteilt das er das Spiel fertig gespielt.
 
 
