@@ -2,11 +2,10 @@
 
 22.8 bis 19.9.2024
 
-## Grob-Planung
+## Beschreibung
 
-1. Für welches der drei Projekte haben Sie sich entschieden?
-2. Wie passen Sie dieses Projekt gem. Ihrer Vorlieben an?
-3. Erklären Sie Ihre Projekt-Idee in einem Satz, als müssen Sie einen Investor davon überzeugen.
+Ich habe ein Konsolenspiel entwickelt, in dem man als Hulk spielt. Zu Beginn erhält der Spieler Gold, mit dem er sich eine Waffe und einen Heiltrank kaufen kann.
+Der erste Gegner ist Bösemann, der Einstiegsgegner des Spiels. Nach seinem Sieg werden neue, stärkere Waffen freigeschaltet, mit denen man sich auf den finalen Kampf gegen Thanos vorbereiten kann. Besiegt man auch Thanos, hat man das Spiel erfolgreich abgeschlossen.
 
 ## 22.8
 
@@ -56,7 +55,7 @@ Heute habe ich den gesamten Kampf programmiert. Man kann mit der Leertaste Damag
 
 - [x] Neue Waffen hinzufügen, die man mit dem gewonnen Gold kaufen kann
 - [x] Für Waffen ein menü machen
-- [ ] Schadenstrank hinzufügen
+- [ ] Schadenstrank hinzufügen(zeitlich nicht geschafft)
 - [x] Fehler auberessung des Leertaten Bugs(Programm stürtzt ab wenn man zu oft die angriffs Taste drückt)
 
 Heute habe ich neue Waffen hinzugefügt sowieso die Waffen in ein Menü eingefügt. Zudem habe ich noch einen grossen Bug im Spiel behoben. Den Schadenstrank zu erstellen habe ich nicht geschafft, weshalb ich es nächste Woche machen werde.
@@ -67,8 +66,16 @@ Heute habe ich neue Waffen hinzugefügt sowieso die Waffen in ein Menü eingefü
 
 ## 19.09
 
-- [ ] Nachdem der Spieler die Sachen gekauft hat(Waffen, Schadenstrank), muss er gegen den neuen Bösewicht kämpfen.Der Bösewicht wird stärker sein
-- [ ] Es soll auch ein Schadenstrank geben, indem der Spieler es dem Bösewicht geben kann.
-- [ ] Nachdem Kampf gegen dem letzten Bösewicht, wird dem Spieler mittgeteilt das er das Spiel fertig gespielt.
+- [x] Nachdem der Spieler die Sachen gekauft hat(Waffen), muss er gegen den neuen Bösewicht kämpfen.Der Bösewicht wird stärker sein
+- [x] Neuen Bösewichtampf programmieren
+- [x] Nachdem Kampf gegen dem letzten Bösewicht, wird dem Spieler mittgeteilt das er das Spiel fertig gespielt.
+
+Heute habe ich noch den Kampf gegen den neuen Bösewicht Thanos programmiert, jetzt ist das Spiel vollständig, sodass man gegen die 2 Bösewicht spielen kann.
+
+## Reflexion
+
+Beim Programmieren des Spiels habe ich viele neue Dinge über die Arbeit mit Klassen und deren Anwendung gelernt. Dabei wurde mir bewusst, welchen Mehrwert Klassen bieten, wenn man sie richtig einsetzt. Außerdem hat mir die Entwicklung des Spiels sehr viel Spaß gemacht.
+
+
 
 
