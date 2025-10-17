@@ -6,6 +6,7 @@
 
 Ich habe ein Konsolenspiel entwickelt, in dem man als Hulk spielt. Zu Beginn erhält der Spieler Gold, mit dem er sich eine Waffe und einen Heiltrank kaufen kann.
 Der erste Gegner ist Bösemann, der Einstiegsgegner des Spiels. Nach seinem Sieg werden neue, stärkere Waffen freigeschaltet, mit denen man sich auf den finalen Kampf gegen Thanos vorbereiten kann. Besiegt man auch Thanos, hat man das Spiel erfolgreich abgeschlossen.
+![Unbenanntes Video – Mit Clipchamp erstellt (3)](https://github.com/user-attachments/assets/d65962fd-2d55-4103-8fcd-3c43289a965a)
 
 ## 22.8
 
@@ -75,6 +76,7 @@ Heute habe ich noch den Kampf gegen den neuen Bösewicht Thanos programmiert, je
 ## Reflexion
 
 Beim Programmieren des Spiels habe ich viele neue Dinge über die Arbeit mit Klassen und deren Anwendung gelernt. Dabei wurde mir bewusst, welchen Mehrwert Klassen bieten, wenn man sie richtig einsetzt. Außerdem hat mir die Entwicklung des Spiels sehr viel Spaß gemacht.
+
 
 
 
