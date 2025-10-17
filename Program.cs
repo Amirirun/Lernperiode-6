@@ -5,6 +5,7 @@ using Lernperiode_6;
 using mini_game;
 using System.Diagnostics;
 using System.Linq.Expressions;
+using System.Data;
 
 
 namespace Lern_periode_6
@@ -23,7 +24,7 @@ namespace Lern_periode_6
 
 
         static void Main(string[] args)
-        {
+        {  
 
 
             Michael_Scofield Held2 = new Michael_Scofield("Michael Scofield", "Brechstange", "Hochbegabt", 60, 10);
@@ -36,16 +37,16 @@ namespace Lern_periode_6
 
             Bösemann Bösewicht1 = new Bösemann("Bösemann", 200, 50, 80);
             Silversurfer Bösewicht2 = new Silversurfer("Silver_Surfer", "Surf Board", "Fliegen", 65, 18);
-            Thanos Bösewicht3 = new Thanos("Thanos", "Goldener Handschuh", "Ultimative zerstörung", 85, 20);
+            Thanos Bösewicht3 = new Thanos("Thanos", "Goldener Handschuh", "Ultimative zerstörung", 350, 20, 10000);
 
 
 
             Heiltrank heil = new Heiltrank(30, 5);
             Hammer hammer = new Hammer("Hammer", 4, 30);
             Axt axt = new Axt("Axt", 2, 23);
-            Schwert schwert = new Schwert("Schwert", 10, 50);
-            Keule Keule = new Keule("Keule", 8, 40);
-            Bogen bogen = new Bogen("Bogen", 9, 45);
+            Schwert schwert = new Schwert("Schwert", 7, 50);
+            Keule keule = new Keule("Keule", 5, 40);
+            Bogen bogen = new Bogen("Bogen", 6, 45);
 
 
 
@@ -164,11 +165,9 @@ namespace Lern_periode_6
 
             }
 
-           
-
-
+            Console.WriteLine("Leben nach dem Trank:" + Held1.Leben);
             Console.ForegroundColor = ConsoleColor.Red;
-            Console.WriteLine("DU bist bereit für den Kampf gegen Bösemann!");
+            Console.WriteLine("DU bist bereit für den Kampf gegen Bösemann");
             Console.ResetColor();
 
             int schadenProSchlag = 1;
@@ -285,25 +284,163 @@ namespace Lern_periode_6
 
             if (hatGewonnen && !abgebrochen)
             {
-                
                 Console.WriteLine();
-                TypeWriteAsync("Dein Gold im Tresor beträgt: " + Held1.Gold);
-                TypeWriteAsync("Du hast neue Waffen freigeschaltet!");
+                Console.WriteLine("Dein Gold im Tresor beträgt: " + Held1.Gold);
+                Console.WriteLine("Du hast neue Waffen freigeschaltet!");
 
                 Console.WriteLine();
                 Console.WriteLine("Stats für Schwert (S):  DMG " + schwert.Damage + "  Preis " + schwert.Price);
-                Console.WriteLine("Stats für Keule  (K):  DMG " + Keule.Damage + "  Preis " + Keule.Price);
+                Console.WriteLine("Stats für Keule  (K):  DMG " + keule.Damage + "  Preis " + keule.Price);
                 Console.WriteLine("Stats für Bogen  (B):  DMG " + bogen.Damage + "  Preis " + bogen.Price);
-                Console.Write("Waffe kaufen? (S/K/B/N): ");
-                
-                var wahl = Console.ReadLine()?.Trim().ToUpperInvariant();
+                Console.Write("Waffe kaufen? (S/K/B): ");
+                string wahl = Console.ReadLine()?.Trim().ToUpperInvariant();
 
-                Console.WriteLine("Kein Kauf getätigt.");
+
+                if (wahl == "S")
+                {
+                    schadenProSchlag = schwert.Damage;
+                    waffenName = schwert.Name;
+                }
+                else if (wahl == "K")
+                {
+                    schadenProSchlag = keule.Damage;
+                    waffenName = keule.Name;
+                }
+                else if (wahl == "B")
+                {
+                    schadenProSchlag = bogen.Damage;
+                    waffenName = bogen.Name;
+                }
+                else
+                {
+                    Console.WriteLine("Du behältst deine alte Waffe.");
+                }
+
+
+
             }
             else if (abgebrochen)
             {
                 Console.WriteLine("Kampf abgebrochen.");
             }
+
+
+
+            Console.WriteLine();
+            Console.ForegroundColor = ConsoleColor.Red;
+            Console.WriteLine("DU bist bereit für den Kampf gegen Thanos!");
+            Console.ResetColor();
+
+            int schadenProSchlag2 = schadenProSchlag;
+            string waffenName2 = waffenName;
+
+
+
+            Console.WriteLine();
+            Console.WriteLine($"Kampf gegen {Bösewicht3.Name}! Waffe: {waffenName2} (DMG {schadenProSchlag2})");
+            Console.WriteLine("Drücke [LEERTASTE] zum Zuschlagen, [ESC] zum Abbrechen.");
+
+            bool abgebrochen2 = false;
+            bool hatGewonnen2 = false;
+
+            try
+            {
+                while (Held1.Leben > 0 && Bösewicht3.Life > 0)
+                {
+                    int hits = 0, dealt = 0;
+                    var sw = Stopwatch.StartNew();
+
+                    while (sw.Elapsed < TimeSpan.FromSeconds(5))
+                    {
+                        if (Console.KeyAvailable)
+                        {
+                            var key = Console.ReadKey(intercept: true).Key;
+
+                            if (key == ConsoleKey.Escape)
+                            {
+                                abgebrochen2 = true;
+                                break;
+                            }
+
+                            if (key == ConsoleKey.Spacebar)
+                            {
+                                hits++;
+                                dealt += schadenProSchlag2;
+                                Console.Write($"\rTreffer: {hits}, geplanter Schaden: {dealt}   ");
+                            }
+                        }
+
+                        Thread.Sleep(10);
+                    }
+
+                    Console.WriteLine();
+                    if (abgebrochen2) break;
+
+                    Bösewicht3.Life = Math.Max(0, Bösewicht3.Life - dealt);
+                    Console.WriteLine($"Deine Treffer: {hits}  ->  Schaden: {dealt}");
+                    Console.WriteLine($"{Bösewicht3.Name} HP: {Bösewicht3.Life}");
+
+                    if (Bösewicht3.Life <= 0)
+                    {
+                        Console.ForegroundColor = ConsoleColor.Green;
+                        Console.WriteLine($"{Bösewicht3.Name} ist besiegt!");
+                        Console.ResetColor();
+
+                        if (Bösewicht3.Gold > 0)
+                        {
+                            Held1.AddGold(Bösewicht3.Gold);
+                            Console.WriteLine($"+{Bösewicht3.Gold} Gold Beute");
+                            Bösewicht3.Gold = 0;
+                        }
+
+                        hatGewonnen2 = true;
+                        break;
+                    }
+
+                    Held1.Leben = Math.Max(0, Held1.Leben - Bösewicht3.Damage);
+                    Console.WriteLine($"{Bösewicht3.Name} schlägt zurück! -{Bösewicht3.Damage} HP  ->  Dein Leben: {Held1.Leben}");
+                    Console.WriteLine("-------------------------------------------------------------");
+
+                    if (Held1.Leben <= 0)
+                    {
+                        Console.ForegroundColor = ConsoleColor.Red;
+                        Console.WriteLine("Du wurdest besiegt…");
+                        Console.ResetColor();
+                        break;
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                Console.ForegroundColor = ConsoleColor.Yellow;
+                Console.WriteLine($"\n[Fehler] {ex.GetType().Name}: {ex.Message}");
+                Console.WriteLine(ex.StackTrace);
+                Console.ResetColor();
+
+            }
+
+            if (hatGewonnen2 && !abgebrochen2)
+            {
+                Console.ForegroundColor = ConsoleColor.Green;
+                Console.WriteLine();
+                Console.WriteLine("Glückwunsch! Du hast Thanos besiegt und das Spiel fertig gespielt!");
+                Console.ResetColor();
+                var wahl = Console.ReadLine()?.Trim().ToUpperInvariant();
+
+            }
+            else if (abgebrochen2)
+            {
+                Console.WriteLine("Kampf abgebrochen.");
+            }
+            else
+            {
+                Console.ForegroundColor = ConsoleColor.Red;
+                Console.WriteLine("Du hast verloren. Versuch es nochmal!");
+                Console.ResetColor();
+                var wahl = Console.ReadLine()?.Trim().ToUpperInvariant();
+            }
         }
+
+
     }
 }

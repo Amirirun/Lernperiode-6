@@ -14,14 +14,15 @@ namespace Lernperiode_6.Bösewicht
         public string Ability;
         public int Life;
         public int Damage;
-        public Thanos(string name, string weapon, string ability, int life, int damage)
+        public int Gold;
+        public Thanos(string name, string weapon, string ability, int life, int damage, int gold)
         {
             Name = name;
             Weapon = weapon;
             Ability = ability;
             Life = life;
             Damage = damage;
-
+            Gold = gold;
         }
 
     }
